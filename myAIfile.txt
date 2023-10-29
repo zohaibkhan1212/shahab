@@ -1,0 +1,6 @@
+this some txt.
+
+git add *
+git commit -m "this is somw text"
+git push
+

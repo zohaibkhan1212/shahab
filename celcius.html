@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Celsius to Fahrenheit Converter</title>
+</head>
+<body>
+  <h1>Celsius to Fahrenheit Converter</h1>
+
+  <input type="number" id="celsius-input" placeholder="Enter Celsius temperature">
+  <button type="button" onclick="convert()">Convert</button>
+
+  <p id="fahrenheit-output"></p>
+  <br>
+
+  <h1>Marla to Square Feet Converter</h1>
+
+  <form action="">
+    <input type="number" name="marla" placeholder="Enter Marla">
+    <button type="submit">Convert</button>
+  </form>
+
+  <p id="square-feet-output"></p>
+
+  <script>
+    function convert() {
+      const marla = document.querySelector('[name="marla"]').value;
+      const squareFeet = marla * 272.25;
+
+      document.getElementById('square-feet-output').innerHTML = `${marla} marla is equal to ${squareFeet} square feet`;
+    }
+
+    document.querySelector('form').addEventListener('submit', convert);
+    function convert() {
+      const celsiusTemperature = document.getElementById('celsius-input').value;
+      const fahrenheitTemperature = celsiusToFahrenheit(celsiusTemperature);
+
+      document.getElementById('fahrenheit-output').innerHTML = `${celsiusTemperature}°C is equal to ${fahrenheitTemperature}°F`;
+    }
+
+    function celsiusToFahrenheit(celsius) {
+      return (celsius * 9 / 5) + 32;
+    }
+  </script>
+</body>
+</html>
